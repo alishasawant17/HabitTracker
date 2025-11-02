@@ -1,13 +1,58 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Primary mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Basic SEO / Social -->
+    <title>HabitTracker — Lightweight habit tracker</title>
+    <meta name="description" content="HabitTracker — a lightweight habit tracker built with React and Vite to build healthier routines." />
+    <meta name="author" content="alishasawant17" />
+    <link rel="canonical" href="https://your-production-url.example.com/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="HabitTracker" />
+    <meta property="og:description" content="A lightweight habit tracker built with React and Vite." />
+    <meta property="og:type" content="website" />
+    <!-- Add og:image when you have a preview image -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- PWA / mobile theme -->
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Performance hints -->
+    <!-- Vite handles modulepreload in dev/build automatically, but explicit modulepreload can help in non-Vite setups -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Example font preload (uncomment and update if using a webfont)
+    <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    -->
+
+    <!-- Security: recommend configuring strict CSP at server level rather than via meta in production.
+         Example server header (preferred): Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' -->
   </head>
+
   <body>
-    <div id="root"></div>
+    <!-- Accessibility: allow keyboard users to skip directly to the app -->
+    <a href="#root" class="skip-to-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+      Skip to content
+    </a>
+
+    <div id="root" role="main" aria-live="polite"></div>
+
+    <!-- Show a helpful message when JS is disabled -->
+    <noscript>
+      <strong>JavaScript is required</strong> — HabitTracker uses JavaScript to render the interface. Please enable JavaScript in your browser.
+    </noscript>
+
+    <!-- Vite entry. Keep as module to allow tree-shaking and ESM-based dev server -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
